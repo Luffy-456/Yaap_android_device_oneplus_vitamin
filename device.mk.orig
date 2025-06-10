@@ -2,8 +2,6 @@
 # SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
-#gms
-TARGET_BUILD_GAPPS := true
 
 # V4AAdd commentMore actions
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
@@ -256,9 +254,6 @@ PRODUCT_PACKAGES += \
     LineageSettingsProviderResTarget \
     OplusDozeResTarget \
     PowerOffAlarmResTarget
-
-PRODUCT_PACKAGES += \
-    POSFrameworksResTarget
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

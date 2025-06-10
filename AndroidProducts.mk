@@ -4,4 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_vitamin.mk
+    $(LOCAL_DIR)/yaap_vitamin.mk

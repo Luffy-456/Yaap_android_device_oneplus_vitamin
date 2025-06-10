@@ -16,6 +16,7 @@ PRODUCT_MODEL := CPH2493
 PRODUCT_NAME := yaap_vitamin
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
+TARGET_BUILD_GAPPS=true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="sys_mssi_64_cn_armv82-user 15 AP3A.240617.008 1742885549055 release-keys" \

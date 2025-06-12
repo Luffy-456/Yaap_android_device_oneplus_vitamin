@@ -1,0 +1,5 @@
+# InfinityX phoneinfo props
+ro.infinity.soc=Mediatek Dimensity 9000
+ro.infinity.battery=5000 mAh
+ro.infinity.display=2772x1240, 120Hz
+ro.infinity.camera=50MP+8MP+16MP

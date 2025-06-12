@@ -200,3 +200,6 @@ WIFI_FEATURE_HOSTAPD_11AX := true
 
 # Inherit the proprietary files
 include vendor/oneplus/vitamin/BoardConfigVendor.mk
+
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop

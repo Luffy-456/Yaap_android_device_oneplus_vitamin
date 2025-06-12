@@ -4,4 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/yaap_vitamin.mk
+    $(LOCAL_DIR)/infinity_vitamin.mk

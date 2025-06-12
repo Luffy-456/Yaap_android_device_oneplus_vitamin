@@ -7,16 +7,38 @@
 $(call inherit-product, device/oneplus/vitamin/device.mk)
 
 # Inherit from the LineageOS configuration.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-#gms
-TARGET_BUILD_GAPPS := true
+#BCR
+#$(call inherit-product, vendor/bcr/bcr.mk)
+
 
 PRODUCT_BRAND := OnePlus
 PRODUCT_DEVICE := vitamin
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := CPH2493
-PRODUCT_NAME := yaap_vitamin
+PRODUCT_NAME := infinity_vitamin
+
+# Whether you are compiling being an OFFICIAL Maintainer:
+INFINITY_BUILD_TYPE := UNOFFICIAL
+
+# Maintainer Name
+INFINITY_MAINTAINER := "LuffyOP"
+
+# Whether the package includes System BLURS
+TARGET_SUPPORTS_BLUR := true
+
+# Whether the compiled package ships Google Apps:
+WITH_GAPPS := true
+
+# Whether the compiled package ships more (mostly unimportant) Google Apps:
+TARGET_SHIPS_FULL_GAPPS := true
+
+# Whether the compiled shipped gapps package uses Google Dialer:
+TARGET_SHIPS_GOOGLE_DIALER := true
+
+# Whether the compiled package ships Motorola Calculator:
+USE_MOTO_CALCULATOR := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 

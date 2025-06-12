@@ -35,7 +35,7 @@ WITH_GAPPS := true
 TARGET_SHIPS_FULL_GAPPS := true
 
 # Whether the compiled shipped gapps package uses Google Dialer:
-TARGET_SHIPS_GOOGLE_DIALER := true
+TARGET_SHIPS_GOOGLE_DIALER := false
 
 # Whether the compiled package ships Motorola Calculator:
 USE_MOTO_CALCULATOR := true

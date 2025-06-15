@@ -50,6 +50,11 @@ PRODUCT_PACKAGES += \
     KeyHandler \
     tri-state-key-calibrate
 
+#Alert slider UI
+PRODUCT_PACKAGES += \
+    POSFrameworksResTarget
+
+    
 # API
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 33

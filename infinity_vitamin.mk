@@ -9,9 +9,6 @@ $(call inherit-product, device/oneplus/vitamin/device.mk)
 # Inherit from the LineageOS configuration.
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-#BCR
-#$(call inherit-product, vendor/bcr/bcr.mk)
-
 
 PRODUCT_BRAND := OnePlus
 PRODUCT_DEVICE := vitamin
@@ -35,7 +32,7 @@ WITH_GAPPS := true
 TARGET_SHIPS_FULL_GAPPS := true
 
 # Whether the compiled shipped gapps package uses Google Dialer:
-TARGET_SHIPS_GOOGLE_DIALER := false
+TARGET_SHIPS_GOOGLE_DIALER := true
 
 # Whether the compiled package ships Motorola Calculator:
 USE_MOTO_CALCULATOR := true

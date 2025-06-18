@@ -68,11 +68,26 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules/v
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules/vendor_ramdisk.modules.load))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules/vendor_ramdisk.modules.load.recovery))
 
+# Use a prebuilt kernel image
 TARGET_PREBUILT_KERNEL := $(KERNEL_PATH)/$(BOARD_KERNEL_IMAGE_NAME)
-TARGET_FORCE_PREBUILT_KERNEL := true
 
-TARGET_KERNEL_SOURCE := kernel/common/android12-5.10
+# Set kernel image name
+BOARD_KERNEL_IMAGE_NAME := Image.gz
+
+# Disable kernel building from source
+#TARGET_FORCE_PREBUILT_KERNEL := true
+
+# Still define kernel source and config in case needed by some tools
+TARGET_KERNEL_SOURCE := kernel/oneplus/mt6983
 TARGET_KERNEL_CONFIG := gki_defconfig
+
+# Enable Clang compilation
+TARGET_KERNEL_CLANG_COMPILE := true
+
+# Path to prebuilt Clang toolchain
+KERNEL_TOOLCHAIN := prebuilts/clang/host/linux-x86/clang-r416183b
+
+
 
 BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
 

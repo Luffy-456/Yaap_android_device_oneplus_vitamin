@@ -5,8 +5,11 @@
 #gms
 TARGET_BUILD_GAPPS := true
 
+#BCR
+$(call inherit-product, vendor/bcr/bcr.mk)
+
 # V4AAdd commentMore actions
-#$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
@@ -369,6 +372,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+
+$(call soong_config_set,OPLUS_LINEAGE_VIBRATOR_HAL,USE_RICHTAP_EFFECT_REMAP,true)
+
 
 # Virtualization service
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
